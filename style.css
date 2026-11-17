@@ -1,0 +1,327 @@
+:root {
+  --harvard-crimson: #650d18;
+  --dark-burgundy: #2b0509;
+  --antique-gold: #c59b27;
+  --bright-gold: #f0cf65;
+  --parchment-bg: #f6efe0;
+  --parchment-dark: #eae0c8;
+  --ink-color: #24170e;
+  --green-ink: #1b5e20;
+  --blue-ink: #1565c0;
+  --gold-ink: #b27b00;
+  --red-ink: #9b111e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--dark-burgundy);
+  background-image: radial-gradient(circle at center, #520a13 0%, #1c0306 100%);
+  color: var(--ink-color);
+  font-family: 'Lora', Georgia, serif;
+  min-height: 100vh;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.parchment-container {
+  background-color: var(--parchment-bg);
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(197, 155, 39, 0.08));
+  width: 100%;
+  max-width: 740px;
+  border: 3px solid var(--antique-gold);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.75), inset 0 0 35px rgba(139, 101, 45, 0.2);
+  padding: 24px;
+}
+
+/* Header Kampus Klasik Amerika */
+.academy-header {
+  text-align: center;
+  border-bottom: 2px double var(--antique-gold);
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+}
+
+.crest {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--harvard-crimson);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  color: var(--harvard-crimson);
+  font-size: 1.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0px rgba(197, 155, 39, 0.35);
+}
+
+.subtitle {
+  color: #5c4332;
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.date-banner {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 16px;
+  background-color: var(--harvard-crimson);
+  color: var(--bright-gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid var(--antique-gold);
+}
+
+.btn-install {
+  display: block;
+  margin: 12px auto 0;
+  background: linear-gradient(135deg, var(--antique-gold), #a67c00);
+  color: #1a0305;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Panel Tambah Siswa */
+.control-panel {
+  background-color: var(--parchment-dark);
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid rgba(197, 155, 39, 0.7);
+  margin-bottom: 20px;
+}
+
+.panel-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--harvard-crimson);
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 12px;
+  border: 1px solid #b59d78;
+  background-color: #fffdf9;
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  color: var(--ink-color);
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--harvard-crimson);
+}
+
+button {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-crimson {
+  background-color: var(--harvard-crimson);
+  color: var(--bright-gold);
+  border: 1px solid var(--antique-gold);
+  padding: 10px 18px;
+}
+
+.btn-crimson:hover {
+  background-color: #80111f;
+}
+
+/* Statistik Kehadiran */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.stat-box {
+  background-color: #fffdf9;
+  border: 1px solid #d4c2a3;
+  border-radius: 6px;
+  padding: 10px 6px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #5c4332;
+}
+
+.stat-value {
+  font-family: 'Cinzel', serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.text-green { color: var(--green-ink); }
+.text-gold { color: var(--gold-ink); }
+.text-red { color: var(--red-ink); }
+
+/* Bagian Daftar Absensi */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #cbb692;
+  padding-bottom: 8px;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  color: var(--harvard-crimson);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-gold {
+  background-color: var(--antique-gold);
+  color: #1f0a0c;
+  border: none;
+  padding: 7px 12px;
+  font-size: 0.78rem;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--harvard-crimson);
+  border: 1px solid var(--harvard-crimson);
+  padding: 7px 12px;
+  font-size: 0.78rem;
+}
+
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.student-card {
+  background-color: #fffdf9;
+  border: 1px solid #d4c2a3;
+  border-left: 5px solid var(--harvard-crimson);
+  padding: 12px 15px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.student-info h3 {
+  font-size: 1.05rem;
+  color: var(--ink-color);
+}
+
+.student-info span {
+  font-size: 0.85rem;
+  color: #6b533e;
+}
+
+.status-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+}
+
+.status-btn {
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  border: 1px solid #cbb692;
+  background-color: #f4ebd9;
+  color: #4a3525;
+}
+
+.status-btn.active-hadir {
+  background-color: var(--green-ink);
+  color: #fff;
+  border-color: var(--green-ink);
+}
+
+.status-btn.active-izin {
+  background-color: var(--blue-ink);
+  color: #fff;
+  border-color: var(--blue-ink);
+}
+
+.status-btn.active-sakit {
+  background-color: #d99b00;
+  color: #1f0a0c;
+  border-color: #b27b00;
+}
+
+.status-btn.active-alpa {
+  background-color: var(--red-ink);
+  color: #fff;
+  border-color: var(--red-ink);
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  color: #9e886b;
+  font-size: 1rem;
+  padding: 4px 8px;
+}
+
+.btn-delete:hover {
+  color: var(--red-ink);
+}
+
+.academy-footer {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #6b533e;
+  border-top: 1px solid #cbb692;
+  padding-top: 12px;
+}
+
+@media (max-width: 540px) {
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  h1 { font-size: 1.45rem; }
+  .student-card { flex-direction: column; align-items: flex-start; }
+  .status-controls { width: 100%; justify-content: space-between; }
+}
