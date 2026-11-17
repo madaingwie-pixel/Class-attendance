@@ -1,0 +1,16 @@
+{
+  "name": "Buku Absensi Kelas Pintar",
+  "short_name": "Absensi Kelas",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#2b0509",
+  "theme_color": "#650d18",
+  "description": "Aplikasi absensi siswa dengan desain kampus klasik yang mudah digunakan",
+  "icons": [
+    {
+      "src": "https://flaticon.com",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
