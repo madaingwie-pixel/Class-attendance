@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absensi Kelas Pintar | Akademi Veritas</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#590d16">
+  <!-- Font Klasik Kampus Amerika & Harry Potter -->
+  <link href="https://googleapis.com" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="parchment-container">
+    <!-- Header Bergaya Lambang Universitas Klasik Amerika -->
+    <header class="academy-header">
+      <div class="crest">✦ EST. 2026 • DISIPLIN & PRESTASI ✦</div>
+      <h1>Buku Absensi Kelas</h1>
+      <p class="subtitle">Sistem Pencatatan Kehadiran Siswa Berbasis Digital</p>
+      <div class="date-banner" id="currentDate">Memuat tanggal hari ini...</div>
+      
+      <!-- Tombol Install Aplikasi ke HP -->
+      <button id="installBtn" class="btn-install" style="display: none;">
+        📲 Pasang Aplikasi ke Layar HP
+      </button>
+    </header>
+
+    <!-- Form Tambah Siswa Baru -->
+    <section class="control-panel">
+      <div class="panel-title">📝 Tambah Data Siswa Baru</div>
+      <div class="input-group">
+        <input type="text" id="studentName" placeholder="Ketik nama lengkap siswa...">
+        <input type="text" id="studentInfo" placeholder="No. Absen / Kelompok (Contoh: Absen 01)">
+        <button onclick="addStudent()" class="btn-crimson">+ Tambah Siswa</button>
+      </div>
+    </section>
+
+    <!-- Ringkasan Statistik Kehadiran -->
+    <section class="stats-bar">
+      <div class="stat-box">
+        <span class="stat-label">Total Siswa</span>
+        <span class="stat-value" id="totalCount">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Hadir</span>
+        <span class="stat-value text-green" id="presentCount">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Izin / Sakit</span>
+        <span class="stat-value text-gold" id="excusedCount">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Alpa</span>
+        <span class="stat-value text-red" id="absentCount">0</span>
+      </div>
+    </section>
+
+    <!-- Daftar Absensi Siswa -->
+    <section class="roll-call-section">
+      <div class="section-header">
+        <h2>Daftar Kehadiran Hari Ini</h2>
+        <div class="action-buttons">
+          <button onclick="copyReport()" class="btn-gold">📋 Salin Laporan ke WA</button>
+          <button onclick="resetAttendance()" class="btn-outline">🔄 Mulai Hari Baru</button>
+        </div>
+      </div>
+
+      <div id="studentList" class="student-list">
+        <!-- Daftar siswa akan muncul otomatis di sini -->
+      </div>
+    </section>
+
+    <footer class="academy-footer">
+      <p>"Kedisiplinan hari ini adalah kunci kesuksesan di masa depan."</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
