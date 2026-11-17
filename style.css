@@ -1,15 +1,21 @@
+/* Mengimpor font tebal bergaya game modern ala Roblox */
+@import url('https://googleapis.com');
+
 :root {
-  --harvard-crimson: #650d18;
-  --dark-burgundy: #2b0509;
-  --antique-gold: #c59b27;
-  --bright-gold: #f0cf65;
-  --parchment-bg: #f6efe0;
-  --parchment-dark: #eae0c8;
-  --ink-color: #24170e;
-  --green-ink: #1b5e20;
-  --blue-ink: #1565c0;
-  --gold-ink: #b27b00;
-  --red-ink: #9b111e;
+  --rbx-bg-dark: #111216;
+  --rbx-panel: #1e2028;
+  --rbx-card: #282b36;
+  --rbx-border: #393d4d;
+  --rbx-green: #00b06f;      /* Warna khas tombol Play Roblox */
+  --rbx-green-dark: #007a4d;
+  --rbx-blue: #00a2ff;
+  --rbx-blue-dark: #0070b3;
+  --rbx-yellow: #ffb800;
+  --rbx-yellow-dark: #b38100;
+  --rbx-red: #f64747;
+  --rbx-red-dark: #b32424;
+  --rbx-text: #ffffff;
+  --rbx-muted: #a3a8b8;
 }
 
 * {
@@ -18,57 +24,68 @@
   padding: 0;
 }
 
+/* Latar belakang pola "Studs" (tonjolan balok Roblox Baseplate) */
 body {
-  background-color: var(--dark-burgundy);
-  background-image: radial-gradient(circle at center, #520a13 0%, #1c0306 100%);
-  color: var(--ink-color);
-  font-family: 'Lora', Georgia, serif;
+  background-color: var(--rbx-bg-dark);
+  background-image: 
+    radial-gradient(#262934 22%, transparent 23%),
+    radial-gradient(#262934 22%, transparent 23%);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  color: var(--rbx-text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
   min-height: 100vh;
   padding: 15px;
   display: flex;
   justify-content: center;
 }
 
+/* Wadah utama bergaya jendela game Roblox */
 .parchment-container {
-  background-color: var(--parchment-bg);
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(197, 155, 39, 0.08));
+  background-color: var(--rbx-panel);
   width: 100%;
   max-width: 740px;
-  border: 3px solid var(--antique-gold);
-  border-radius: 10px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.75), inset 0 0 35px rgba(139, 101, 45, 0.2);
+  border: 3px solid var(--rbx-border);
+  border-bottom: 8px solid #13151a;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75);
   padding: 24px;
 }
 
-/* Header Kampus Klasik Amerika */
+/* Header Bergaya Lobby / Halaman Game Roblox */
 .academy-header {
   text-align: center;
-  border-bottom: 2px double var(--antique-gold);
+  border-bottom: 3px solid var(--rbx-border);
   padding-bottom: 18px;
   margin-bottom: 20px;
 }
 
 .crest {
-  font-family: 'Cinzel', serif;
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  color: var(--harvard-crimson);
-  font-weight: 700;
-  margin-bottom: 6px;
+  display: inline-block;
+  background-color: #2d313e;
+  color: var(--rbx-blue);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 2px solid var(--rbx-border);
+  margin-bottom: 8px;
 }
 
 h1 {
-  font-family: 'Cinzel', serif;
-  color: var(--harvard-crimson);
-  font-size: 1.85rem;
+  font-family: 'Fredoka', sans-serif;
+  color: #ffffff;
+  font-size: 2rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 0px rgba(197, 155, 39, 0.35);
+  letter-spacing: 0.5px;
+  text-shadow: 0 3px 0 #000000;
 }
 
 .subtitle {
-  color: #5c4332;
-  font-size: 0.95rem;
+  color: var(--rbx-muted);
+  font-size: 0.92rem;
+  font-weight: 500;
   margin-top: 4px;
 }
 
@@ -76,42 +93,51 @@ h1 {
   display: inline-block;
   margin-top: 12px;
   padding: 6px 16px;
-  background-color: var(--harvard-crimson);
-  color: var(--bright-gold);
-  font-family: 'Cinzel', serif;
+  background-color: #16181f;
+  color: var(--rbx-yellow);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
   font-size: 0.85rem;
-  border-radius: 4px;
-  border: 1px solid var(--antique-gold);
+  border-radius: 8px;
+  border: 2px solid var(--rbx-border);
 }
 
+/* Tombol Install bergaya tombol "PLAY" Hijau Roblox */
 .btn-install {
   display: block;
-  margin: 12px auto 0;
-  background: linear-gradient(135deg, var(--antique-gold), #a67c00);
-  color: #1a0305;
-  font-family: 'Cinzel', serif;
+  margin: 14px auto 0;
+  background-color: var(--rbx-green);
+  color: #ffffff;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
   font-weight: 700;
   border: none;
-  padding: 9px 18px;
-  border-radius: 5px;
+  border-bottom: 5px solid var(--rbx-green-dark);
+  padding: 10px 24px;
+  border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 176, 111, 0.4);
+}
+
+.btn-install:active {
+  transform: translateY(3px);
+  border-bottom-width: 2px;
 }
 
 /* Panel Tambah Siswa */
 .control-panel {
-  background-color: var(--parchment-dark);
-  padding: 15px;
-  border-radius: 6px;
-  border: 1px solid rgba(197, 155, 39, 0.7);
+  background-color: var(--rbx-card);
+  padding: 16px;
+  border-radius: 12px;
+  border: 2px solid var(--rbx-border);
+  border-bottom: 5px solid #181a21;
   margin-bottom: 20px;
 }
 
 .panel-title {
-  font-family: 'Cinzel', serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--harvard-crimson);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.95rem;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -124,40 +150,51 @@ h1 {
 input {
   flex: 1;
   min-width: 180px;
-  padding: 10px 12px;
-  border: 1px solid #b59d78;
-  background-color: #fffdf9;
-  font-family: 'Lora', serif;
-  font-size: 0.95rem;
-  color: var(--ink-color);
-  border-radius: 4px;
+  padding: 11px 14px;
+  border: 2px solid var(--rbx-border);
+  background-color: #14161c;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+input::placeholder {
+  color: #6c7285;
 }
 
 input:focus {
   outline: none;
-  border-color: var(--harvard-crimson);
+  border-color: var(--rbx-blue);
 }
 
 button {
-  font-family: 'Cinzel', serif;
+  font-family: 'Fredoka', sans-serif;
   font-weight: 600;
   cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.2s ease;
+  border-radius: 8px;
+  transition: transform 0.1s ease, filter 0.15s ease;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+button:active {
+  transform: translateY(2px);
 }
 
 .btn-crimson {
-  background-color: var(--harvard-crimson);
-  color: var(--bright-gold);
-  border: 1px solid var(--antique-gold);
+  background-color: var(--rbx-green);
+  color: #ffffff;
+  border: none;
+  border-bottom: 4px solid var(--rbx-green-dark);
   padding: 10px 18px;
+  font-size: 0.95rem;
 }
 
-.btn-crimson:hover {
-  background-color: #80111f;
-}
-
-/* Statistik Kehadiran */
+/* Statistik Kehadiran Bergaya Badge / Robux Counter */
 .stats-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -166,31 +203,34 @@ button {
 }
 
 .stat-box {
-  background-color: #fffdf9;
-  border: 1px solid #d4c2a3;
-  border-radius: 6px;
-  padding: 10px 6px;
+  background-color: var(--rbx-card);
+  border: 2px solid var(--rbx-border);
+  border-bottom: 5px solid #181a21;
+  border-radius: 10px;
+  padding: 12px 6px;
   text-align: center;
 }
 
 .stat-label {
   display: block;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: #5c4332;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--rbx-muted);
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
 
 .stat-value {
-  font-family: 'Cinzel', serif;
-  font-size: 1.45rem;
-  font-weight: 700;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.55rem;
+  color: #ffffff;
 }
 
-.text-green { color: var(--green-ink); }
-.text-gold { color: var(--gold-ink); }
-.text-red { color: var(--red-ink); }
+.text-green { color: var(--rbx-green); }
+.text-gold { color: var(--rbx-yellow); }
+.text-red { color: var(--rbx-red); }
 
-/* Bagian Daftar Absensi */
+/* Bagian Daftar Player / Siswa */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -198,14 +238,14 @@ button {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 14px;
-  border-bottom: 1px solid #cbb692;
-  padding-bottom: 8px;
+  border-bottom: 2px solid var(--rbx-border);
+  padding-bottom: 10px;
 }
 
 h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.15rem;
-  color: var(--harvard-crimson);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 
 .action-buttons {
@@ -214,19 +254,21 @@ h2 {
 }
 
 .btn-gold {
-  background-color: var(--antique-gold);
-  color: #1f0a0c;
+  background-color: var(--rbx-blue);
+  color: #ffffff;
   border: none;
-  padding: 7px 12px;
-  font-size: 0.78rem;
+  border-bottom: 4px solid var(--rbx-blue-dark);
+  padding: 8px 14px;
+  font-size: 0.82rem;
 }
 
 .btn-outline {
-  background-color: transparent;
-  color: var(--harvard-crimson);
-  border: 1px solid var(--harvard-crimson);
-  padding: 7px 12px;
-  font-size: 0.78rem;
+  background-color: #343846;
+  color: #ffffff;
+  border: none;
+  border-bottom: 4px solid #1e2029;
+  padding: 8px 14px;
+  font-size: 0.82rem;
 }
 
 .student-list {
@@ -235,12 +277,14 @@ h2 {
   gap: 10px;
 }
 
+/* Kartu Siswa bergaya Player List Roblox */
 .student-card {
-  background-color: #fffdf9;
-  border: 1px solid #d4c2a3;
-  border-left: 5px solid var(--harvard-crimson);
+  background-color: var(--rbx-card);
+  border: 2px solid var(--rbx-border);
+  border-left: 6px solid var(--rbx-blue);
+  border-bottom: 4px solid #181a21;
   padding: 12px 15px;
-  border-radius: 6px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -249,79 +293,87 @@ h2 {
 }
 
 .student-info h3 {
-  font-size: 1.05rem;
-  color: var(--ink-color);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.08rem;
+  color: #ffffff;
+  letter-spacing: 0.3px;
 }
 
 .student-info span {
-  font-size: 0.85rem;
-  color: #6b533e;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rbx-muted);
 }
 
 .status-controls {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 6px;
   align-items: center;
 }
 
+/* Tombol Status bergaya Blok 3D */
 .status-btn {
-  padding: 6px 10px;
-  font-size: 0.75rem;
-  border: 1px solid #cbb692;
-  background-color: #f4ebd9;
-  color: #4a3525;
+  padding: 7px 11px;
+  font-size: 0.78rem;
+  border: none;
+  border-bottom: 3px solid #16181f;
+  background-color: #383c4c;
+  color: #d0d4e0;
 }
 
 .status-btn.active-hadir {
-  background-color: var(--green-ink);
-  color: #fff;
-  border-color: var(--green-ink);
+  background-color: var(--rbx-green);
+  color: #ffffff;
+  border-bottom-color: var(--rbx-green-dark);
 }
 
 .status-btn.active-izin {
-  background-color: var(--blue-ink);
-  color: #fff;
-  border-color: var(--blue-ink);
+  background-color: var(--rbx-blue);
+  color: #ffffff;
+  border-bottom-color: var(--rbx-blue-dark);
 }
 
 .status-btn.active-sakit {
-  background-color: #d99b00;
-  color: #1f0a0c;
-  border-color: #b27b00;
+  background-color: var(--rbx-yellow);
+  color: #111216;
+  border-bottom-color: var(--rbx-yellow-dark);
 }
 
 .status-btn.active-alpa {
-  background-color: var(--red-ink);
-  color: #fff;
-  border-color: var(--red-ink);
+  background-color: var(--rbx-red);
+  color: #ffffff;
+  border-bottom-color: var(--rbx-red-dark);
 }
 
 .btn-delete {
-  background: none;
-  border: none;
-  color: #9e886b;
-  font-size: 1rem;
-  padding: 4px 8px;
+  background-color: #21232c;
+  border: 1px solid var(--rbx-border);
+  color: var(--rbx-muted);
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
 .btn-delete:hover {
-  color: var(--red-ink);
+  background-color: var(--rbx-red);
+  color: #ffffff;
+  border-color: var(--rbx-red);
 }
 
 .academy-footer {
   margin-top: 25px;
   text-align: center;
   font-size: 0.85rem;
-  font-style: italic;
-  color: #6b533e;
-  border-top: 1px solid #cbb692;
-  padding-top: 12px;
+  font-weight: 600;
+  color: var(--rbx-muted);
+  border-top: 2px solid var(--rbx-border);
+  padding-top: 14px;
 }
 
 @media (max-width: 540px) {
   .stats-bar { grid-template-columns: repeat(2, 1fr); }
-  h1 { font-size: 1.45rem; }
+  h1 { font-size: 1.55rem; }
   .student-card { flex-direction: column; align-items: flex-start; }
   .status-controls { width: 100%; justify-content: space-between; }
 }
